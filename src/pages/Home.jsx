@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import JobList from "../components/JobList";
 import JobSearch from "../components/JobSearch";
 
@@ -56,6 +57,7 @@ function Home() {
       <h1>Job Board</h1>
       <JobSearch setFilters={setFilters} />
       <JobList jobs={jobs} />
+      <Link to="/create-job">Create a New Job</Link>
     </div>
   );
 }
